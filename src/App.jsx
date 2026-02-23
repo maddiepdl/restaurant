@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import MenuPage from "./pages/Menu.jsx";
 import OrderPage from "./pages/OrderPage.jsx";
 import Error from "./pages/Error.jsx";
+import { ChatbotPage } from "./pages/ChatBot.jsx";
 
 // sets up my required routes
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<MenuPage />} />
           <Route path="/order" element={<OrderPage />} />
+          <Route path="/chat" element={<ChatbotPage />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

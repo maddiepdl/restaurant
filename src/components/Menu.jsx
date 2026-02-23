@@ -1,14 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";  // highlights which page the user is currently on
 
-// navbar shows Home, Menu & Order
+// navbar shows Home, Menu, Order & Chat with active highlighting
 export function Menu() {
   return (
     <nav className="navbar">
-      <h2>Creole Restaurant</h2>
-      <Link to="/">Home</Link>
-      <Link to="/menu">Menu</Link>
-      <Link to="/order">Order Now</Link>
+      <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
+        Home
+      </NavLink>
+      <NavLink to="/menu" className={({ isActive }) => (isActive ? "active" : "")}>
+        Menu
+      </NavLink>
+      <NavLink to="/order" className={({ isActive }) => (isActive ? "active" : "")}>
+        Order Now
+      </NavLink>
+      <NavLink to="/chat" className={({ isActive }) => (isActive ? "active" : "")}>
+        Chat
+      </NavLink>
     </nav>
   );
 }
